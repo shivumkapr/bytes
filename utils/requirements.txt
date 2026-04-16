@@ -1,0 +1,4 @@
+tavily-python
+feedparser
+requests
+beautifulsoup4
