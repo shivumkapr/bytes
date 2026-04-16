@@ -91,7 +91,7 @@ def save_json(data: list) -> None:
     with open("./testing/data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-def main():
+def data_ingestion():
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) NewsValidator/1.0'})
 
@@ -115,7 +115,7 @@ def main():
 
     for feed, sources in NEWS_FEEDS.items():
         for channel, url in sources.items():
-            print(f"Pulling articles from {channel}'s RSS FEED")
+            print(f"Pulling articles from {channel}'s RSS feed")
             print("#" * 50 + "\n")
 
             entries, error = get_feed(url, session)
@@ -143,6 +143,3 @@ def main():
                     }
                 )
     save_json(news_data)
-
-if __name__ == "__main__":
-    main()
