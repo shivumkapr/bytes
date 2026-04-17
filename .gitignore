@@ -8,6 +8,7 @@ lib64/
 __pycache__/
 *.py[cod]
 *$py.class
+.DS_Store
 
 # Environments
 .env

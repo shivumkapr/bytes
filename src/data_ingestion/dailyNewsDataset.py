@@ -106,7 +106,7 @@ def data_ingestion():
                 f: "feeds such as Technology or Business"
                 t: "titles of the article"
                 d: "short description of the article"
-            }
+            }, ...
         ]
 
     """
